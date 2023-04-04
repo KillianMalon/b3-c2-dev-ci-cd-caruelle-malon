@@ -32,11 +32,27 @@ function squareRoot (a) {
     throw new Error('Les racines carrées des nombres négatifs ne sont pas prises en charge')
   }
 
-  return Math.sqrt(a)
+  let precision = 0.0001;
+  let x = a;
+  let y = 1.0;
+  while (x - y > precision) {
+    x = (x + y) / 2;
+    y = a / x;
+  }
+  return parseFloat(x).toFixed(2);
 }
 
 function power (base, exponent) {
-  return Math.pow(base, exponent)
+  if (exponent === 0) {
+    return 1;
+  } else if (exponent < 0) {
+    return 1 / puissance(base, -exponent);
+  }
+  let result = base;
+  for (let i = 1; i < exponent; i++) {
+    result *= base;
+  }
+  return result;
 }
 // #endregion TDD tests
 
