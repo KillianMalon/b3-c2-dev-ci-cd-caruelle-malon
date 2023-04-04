@@ -9,15 +9,15 @@ describe('Operations', () => {
   // Addition
   it('Should add two positifs numbers.', () => {
     const result = operations.add(5, 10)
-    expect(result).to.equal(15)
+    expect(result).to.equal(15.00)
   })
   it('Should add two negatifs numbers.', () => {
     const result = operations.add(-25, -10)
-    expect(result).to.equal(-35)
+    expect(result).to.equal(-35.00)
   })
   it('Should add two opposites numbers.', () => {
     const result = operations.add(2, -25)
-    expect(result).to.equal(-23)
+    expect(result).to.equal(-23.00)
   })
   it('Should add two decimal numbers.', () => {
     const result = operations.add(2.20, 3.50)
@@ -30,15 +30,15 @@ describe('Operations', () => {
   // Subtraction
   it('Should subtract two numbers.', () => {
     const result = operations.subtract(10, 5)
-    expect(result).to.equal(5)
+    expect(result).to.equal(5.00)
   })
   it('Should subtract two negatifs numbers.', () => {
     const result = operations.subtract(-25, -10)
-    expect(result).to.equal(-15)
+    expect(result).to.equal(-15.00)
   })
   it('Should subtract two opposites numbers.', () => {
     const result = operations.subtract(2, -25)
-    expect(result).to.equal(27)
+    expect(result).to.equal(27.00)
   })
   it('Should subtract two decimal numbers.', () => {
     const result = operations.subtract(2.20, 3.50)
@@ -51,15 +51,15 @@ describe('Operations', () => {
   // Multiplication
   it('Should multiply two numbers.', () => {
     const result = operations.multiply(5, 10)
-    expect(result).to.equal(50)
+    expect(result).to.equal(50.00)
   })
   it('Should multiply two negatifs numbers.', () => {
     const result = operations.multiply(-25, -10)
-    expect(result).to.equal(250)
+    expect(result).to.equal(250.00)
   })
   it('Should multiply two opposites numbers.', () => {
     const result = operations.multiply(2, -25)
-    expect(result).to.equal(-50)
+    expect(result).to.equal(-50.00)
   })
   it('Should multiply two decimal numbers.', () => {
     const result = operations.multiply(2.20, 3.50)
@@ -72,11 +72,11 @@ describe('Operations', () => {
   // Division
   it('Should divide two numbers.', () => {
     const result = operations.divide(10, 5)
-    expect(result).to.equal(2)
+    expect(result).to.equal(2.00)
   })
   it('Should divide two negatifs numbers.', () => {
     const result = operations.divide(-25, -10)
-    expect(result).to.equal(2.5)
+    expect(result).to.equal(2.50)
   })
   it('Should divide two opposites numbers.', () => {
     const result = operations.divide(2, -25)
@@ -84,7 +84,7 @@ describe('Operations', () => {
   })
   it('Should divide two decimal numbers.', () => {
     const result = operations.divide(2.20, 3.50)
-    expect(result).to.equal(0.6285714285714286)
+    expect(result).to.equal(0.63)
   })
   it('Should throw an error when dividing by 0.', () => {
     expect(() => operations.divide(10, 0)).to.throw('Division par zéro non autorisée')
@@ -96,11 +96,11 @@ describe('Operations', () => {
   // Percentage
   it('Should calculate the percentage.', () => {
     const result = operations.percentage(50, 10)
-    expect(result).to.equal(5)
+    expect(result).to.equal(5.00)
   })
   it('Should calculate the percentage.', () => {
     const result = operations.percentage(-20, 15)
-    expect(result).to.equal(-3)
+    expect(result).to.equal(-3.00)
   })
   it('Should calculate the percentage.', () => {
     const result = operations.percentage(75, -25)
@@ -115,12 +115,12 @@ describe('Operations', () => {
   // #region TDD tests
   it('Should calculate the square of a number.', () => {
     const result = operations.square(4)
-    expect(result).to.equal(16)
+    expect(result).to.equal(16.00)
   })
 
   it('Should calculate the square of a number.', () => {
     const result = operations.square(-5)
-    expect(result).to.equal(25)
+    expect(result).to.equal(25.00)
   })
 
   it('Should calculate the square of a number.', () => {
@@ -130,12 +130,12 @@ describe('Operations', () => {
 
   it('Should calculate the square of a number.', () => {
     const result = operations.square(525)
-    expect(result).to.equal(275625)
+    expect(result).to.equal(275625.00)
   })
 
   it('Should calculate the square root of a number.', () => {
     const result = operations.squareRoot(9)
-    expect(result).to.equal(3)
+    expect(result).to.equal(3.00)
   })
 
   it('Should throw an error when calculating the square root of a negative number.', () => {
@@ -148,12 +148,12 @@ describe('Operations', () => {
 
   it('Should calculate the power of a number.', () => {
     const result = operations.power(2, 3)
-    expect(result).to.equal(8)
+    expect(result).to.equal(8.00)
   })
 
   it('Should return 1 when the exponent is 0.', () => {
     const result = operations.power(5, 0)
-    expect(result).to.equal(1)
+    expect(result).to.equal(1.00)
   })
 
   it('Should calculate the power with a negative exponent.', () => {
@@ -163,7 +163,7 @@ describe('Operations', () => {
 
   it('Should calculate the power of a number.', () => {
     const result = operations.power(5, 8)
-    expect(result).to.equal(390625)
+    expect(result).to.equal(390625.00)
   })
   // #endregion TDD tests
 })
