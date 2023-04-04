@@ -4,18 +4,18 @@ function add (a, b) {
 }
 
 function subtract (a, b) {
-  return parseFloat(a - b).toFixed(2)
+  return a - b
 }
 
 function multiply (a, b) {
-  return parseFloat(a * b).toFixed(2)
+  return a * b
 }
 
 function divide (a, b) {
   if (b === 0) {
     throw new Error('Division par zéro non autorisée')
   }
-  return parseFloat(a / b).toFixed(2)
+  return a / b
 }
 
 function percentage (a, b) {

@@ -24,28 +24,28 @@ describe('Operations', () => {
     expect(result).to.equal(5.70)
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.add(5, null)).to.throw("It's not two numbers")
+    expect(() => operations.add(5, "")).to.throw("It's not two numbers")
   })
 
   // Subtraction
   it('Should subtract two numbers.', () => {
     const result = operations.subtract(10, 5)
-    expect(result).to.equal(5.00)
+    expect(result).to.equal(5)
   })
   it('Should subtract two negatifs numbers.', () => {
     const result = operations.subtract(-25, -10)
-    expect(result).to.equal(-15.00)
+    expect(result).to.equal(-15)
   })
   it('Should subtract two opposites numbers.', () => {
     const result = operations.subtract(2, -25)
-    expect(result).to.equal(27.00)
+    expect(result).to.equal(27)
   })
   it('Should subtract two decimal numbers.', () => {
     const result = operations.subtract(2.20, 3.50)
-    expect(result).to.equal(-1.30)
+    expect(result).to.equal(-1.3)
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.subtract(5, null)).to.throw("It's not two numbers")
+    expect(() => operations.subtract(5, "")).to.throw("It's not two numbers")
   })
 
   // Multiplication
@@ -66,7 +66,7 @@ describe('Operations', () => {
     expect(result).to.equal(7.70)
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.multiply(5, null)).to.throw("It's not two numbers")
+    expect(() => operations.multiply(5, "")).to.throw("It's not two numbers")
   })
 
   // Division
@@ -90,7 +90,7 @@ describe('Operations', () => {
     expect(() => operations.divide(10, 0)).to.throw('Division par zéro non autorisée')
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.divide(5, null)).to.throw("It's not two numbers")
+    expect(() => operations.divide(5, "")).to.throw("It's not two numbers")
   })
 
   // Percentage
@@ -107,7 +107,7 @@ describe('Operations', () => {
     expect(result).to.equal(-18.75)
   })
   it("Should throw an error when the value it's not a numbers.", () => {
-    expect(() => operations.divide(null, 15)).to.throw("The value it's not a number")
+    expect(() => operations.divide("", 15)).to.throw("The value it's not a number")
   })
 
 
