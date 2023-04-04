@@ -1,17 +1,29 @@
 // #region BDD tests
 function add (a, b) {
+  if(typeof(a) != 'number' || typeof(b) != 'number') {
+    throw new Error("a ou b n'est pas un chiffre")
+  }
   return a + b
 }
 
 function subtract (a, b) {
+  if(typeof(a) != 'number' || typeof(b) != 'number') {
+    throw new Error("a ou b n'est pas un chiffre")
+  }
   return a - b
 }
 
 function multiply (a, b) {
+  if(typeof(a) != 'number' || typeof(b) != 'number') {
+    throw new Error("a ou b n'est pas un chiffre")
+  }
   return a * b
 }
 
 function divide (a, b) {
+  if(typeof(a) != 'number' || typeof(b) != 'number') {
+    throw new Error("a ou b n'est pas un chiffre")
+  }
   if (b === 0) {
     throw new Error('Division par zéro non autorisée')
   }
@@ -19,6 +31,9 @@ function divide (a, b) {
 }
 
 function percentage (a, b) {
+  if(typeof(a) != 'number') {
+    throw new Error("a n'est pas un chiffre")
+  }
   return (a * b) / 100
 }
 // #endregion BDD tests
@@ -30,6 +45,8 @@ function square (a) {
 function squareRoot (a) {
   if (a < 0) {
     throw new Error('Les racines carrées des nombres négatifs ne sont pas prises en charge')
+  }else if (a === 0) {
+    throw new Error("La racine carré de 0 n'est pas pris en compteé")
   }
 
   let precision = 0.0001;

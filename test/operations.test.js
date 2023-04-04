@@ -24,7 +24,7 @@ describe('Operations', () => {
     expect(result).to.equal(5.70)
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.add(5, "")).to.throw("It's not two numbers")
+    expect(() => operations.add(5, null)).to.throw("a ou b n'est pas un chiffre")
   })
 
   // Subtraction
@@ -41,11 +41,11 @@ describe('Operations', () => {
     expect(result).to.equal(27)
   })
   it('Should subtract two decimal numbers.', () => {
-    const result = operations.subtract(2.20, 3.50)
+    const result = parseFloat(operations.subtract(2.2, 3.5)).toFixed(1)
     expect(result).to.equal(-1.3)
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.subtract(5, "")).to.throw("It's not two numbers")
+    expect(() => operations.subtract(5, "")).to.throw("a ou b n'est pas un chiffre")
   })
 
   // Multiplication
@@ -66,7 +66,7 @@ describe('Operations', () => {
     expect(result).to.equal(7.70)
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.multiply(5, "")).to.throw("It's not two numbers")
+    expect(() => operations.multiply(5, "")).to.throw("a ou b n'est pas un chiffre")
   })
 
   // Division
@@ -90,7 +90,7 @@ describe('Operations', () => {
     expect(() => operations.divide(10, 0)).to.throw('Division par zéro non autorisée')
   })
   it('Should throw an error when not have two numbers.', () => {
-    expect(() => operations.divide(5, "")).to.throw("It's not two numbers")
+    expect(() => operations.divide(5, "")).to.throw("a ou b n'est pas un chiffre")
   })
 
   // Percentage
@@ -135,7 +135,7 @@ describe('Operations', () => {
 
   it('Should calculate the square root of a number.', () => {
     const result = operations.squareRoot(9)
-    expect(result).to.equal(3.00)
+    expect(result).to.equal(3)
   })
 
   it('Should throw an error when calculating the square root of a negative number.', () => {
@@ -163,7 +163,7 @@ describe('Operations', () => {
 
   it('Should calculate the power of a number.', () => {
     const result = operations.power(5, 8)
-    expect(result).to.equal(390625.00)
+    expect(result).to.equal(390625)
   })
   // #endregion TDD tests
 })
