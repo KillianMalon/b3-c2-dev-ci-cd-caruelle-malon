@@ -46,7 +46,7 @@ function power (base, exponent) {
   if (exponent === 0) {
     return 1;
   } else if (exponent < 0) {
-    return 1 / puissance(base, -exponent);
+    return 1 / power(base, -exponent);
   }
   let result = base;
   for (let i = 1; i < exponent; i++) {
