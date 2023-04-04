@@ -34,7 +34,7 @@ describe('Operations', () => {
   })
   it('Should subtract two negatifs numbers.', () => {
     const result = operations.subtract(-25, -10)
-    expect(result).to.equal(-35)
+    expect(result).to.equal(-15)
   })
   it('Should subtract two opposites numbers.', () => {
     const result = operations.subtract(2, -25)

@@ -4,18 +4,18 @@ function add (a, b) {
 }
 
 function subtract (a, b) {
-  return a - b
+  return parseFloat(a - b).toFixed(2)
 }
 
 function multiply (a, b) {
-  return a * b
+  return parseFloat(a * b).toFixed(2)
 }
 
 function divide (a, b) {
   if (b === 0) {
     throw new Error('Division par zéro non autorisée')
   }
-  return a / b
+  return parseFloat(a / b).toFixed(2)
 }
 
 function percentage (a, b) {
@@ -52,7 +52,7 @@ function power (base, exponent) {
   for (let i = 1; i < exponent; i++) {
     result *= base;
   }
-  return result;
+  return parseFloat(result).toFixed(2);
 }
 // #endregion TDD tests
 
